@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #e0f2fe, #f8fafc);
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+}
+
+h2 {
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.form-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-add .form-group {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-add label {
+    width: 80px;
+    font-weight: bold;
+}
+
+.form-add input {
+    width: 200px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 260px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+button {
+    padding: 10px 18px;
+    background: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+}
+
+table th {
+    background: #3b82f6;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+table tr:hover {
+    background: #f1f5f9;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Edit button */
+
+.edit-btn {
+    padding: 8px 14px;
+    background: #c7e035;
+    /* cam */
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    background: #d97706;
+}
+
+
+/* Delete button */
+
+.delete-btn {
+    background: #ef4444;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+
+/* Fix form inline trong table */
+
+.inline-form {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
