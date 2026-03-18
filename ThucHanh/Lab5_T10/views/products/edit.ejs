@@ -1,0 +1,36 @@
+<form action="/edit/<%= product.ID %>" method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>Tên</td>
+            <td><input name="name" value="<%= product.name %>"></td>
+        </tr>
+
+        <tr>
+            <td>Giá</td>
+            <td><input name="price" value="<%= product.price %>"></td>
+        </tr>
+
+        <tr>
+            <td>Số lượng</td>
+            <td><input name="quantity" value="<%= product.quantity %>"></td>
+        </tr>
+
+        <tr>
+            <td>Ảnh hiện tại</td>
+            <td><img src="<%= product.image %>" width="100"></td>
+        </tr>
+
+        <tr>
+            <td>Chọn ảnh mới</td>
+            <td>
+                <input type="file" name="image" accept="image/*">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button type="submit">Cập nhật</button>
+            </td>
+        </tr>
+    </table>
+</form>

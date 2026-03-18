@@ -1,0 +1,182 @@
+/* Tổng thể nền xanh ngọc chuyển sắc */
+body {
+    background: linear-gradient(to bottom right, #82f3d6, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+}
+
+/* Khung trắng bao quanh toàn bộ nội dung */
+.main-content {
+    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    border-radius: 15px; /* Bo góc mạnh như hình */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+}
+
+/* Tiêu đề viết hoa, căn giữa */
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Thanh công cụ: Tìm kiếm và Nút thêm nằm giữa */
+.top-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    gap: 5px;
+}
+
+.search-form input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.btn-search {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #2196F3; /* Màu xanh dương của nút Thêm */
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Bảng sản phẩm */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header bảng màu xanh lá cây */
+.product-table thead tr {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.product-table th {
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.product-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+    vertical-align: middle;
+}
+
+/* Ảnh sản phẩm thu nhỏ */
+.img-thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+/* Nút Sửa và Xóa màu xanh dương như hình mẫu */
+.btn-edit, .btn-delete {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0 3px;
+    display: inline-block;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    background-color: #2980b9;
+}
+/* Container cho Form Thêm/Sửa - Thu hẹp hơn trang danh sách để cân đối */
+.form-container {
+    max-width: 600px; /* Độ rộng vừa phải cho form */
+    margin: 0 auto;
+}
+
+/* Từng dòng trong Form */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách giữa các hàng */
+}
+
+/* Định dạng nhãn Label */
+.form-group label {
+    width: 130px; /* Độ rộng cố định giúp các ô input thẳng hàng */
+    font-weight: bold;
+    color: #333;
+    flex-shrink: 0; /* Không cho label bị co lại */
+}
+
+/* Định dạng các ô Input */
+.form-group input {
+    flex: 1; /* Tự động lấp đầy phần còn lại của hàng */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2196F3; /* Đổi màu viền khi chọn */
+}
+
+/* Cụm nút bấm phía dưới */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Nút thêm mới - dùng chung màu với nút thêm ở trang chủ */
+.btn-submit {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Nút quay lại - màu xám hoặc đỏ để phân biệt */
+.btn-back {
+    background-color: #9e9e9e;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
