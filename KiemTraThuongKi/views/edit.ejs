@@ -1,0 +1,22 @@
+<form action="/edit/<%= ticket.ticketId %>" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="ticketId" value="<%= ticket.ticketId %>">
+    <input type="hidden" name="oldImageUrl" value="<%= ticket.imageUrl %>">
+
+    <label>Tên sự kiện:</label>
+    <input type="text" name="eventName" value="<%= ticket.eventName %>" required>
+
+    <label>Loại vé:</label>
+    <select name="category">
+        <option value="Standard" <%= ticket.category==='Standard'?'selected':'' %>>Standard</option>
+        <option value="VIP" <%= ticket.category==='VIP'?'selected':'' %>>VIP</option>
+        <option value="VVIP" <%= ticket.category==='VVIP'?'selected':'' %>>VVIP</option>
+    </select>
+
+    <label>Số lượng:</label>
+    <input type="number" name="quantity" value="<%= ticket.quantity %>">
+
+    <label>Ảnh mới (để trống nếu giữ ảnh cũ):</label>
+    <input type="file" name="image">
+
+    <button type="submit">Cập nhật vé</button>
+</form>

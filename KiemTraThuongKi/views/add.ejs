@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thêm vé sự kiện</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        
+        .btn-save {
+            width: 100%;
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Thêm vé mới</h2>
+        <form action="/add" method="POST" enctype="multipart/form-data">
+            <input type="text" name="ticketId" placeholder="Mã vé (PK)" required>
+            <input type="text" name="eventName" placeholder="Tên sự kiện" required>
+            <input type="text" name="holderName" placeholder="Tên khách hàng" required>
+
+            <select name="category">
+                <option value="Standard">Standard</option>
+                <option value="VIP">VIP (Giảm 10% nếu >= 4 vé)</option>
+                <option value="VVIP">VVIP (Giảm 15% nếu >= 2 vé)</option>
+            </select>
+
+            <input type="number" name="quantity" placeholder="Số lượng" required>
+            <input type="number" name="pricePerTicket" placeholder="Giá vé mỗi người" required>
+            <input type="date" name="eventDate" required>
+
+            <select name="status">
+                <option value="Upcoming">Upcoming</option>
+                <option value="Sold">Sold</option>
+            </select>
+
+            <label>Ảnh minh họa (Upload S3):</label>
+            <input type="file" name="image" accept="image/*" required>
+
+            <button type="submit" class="btn-save">Xác nhận Lưu</button>
+            <p style="text-align: center;"><a href="/" style="color: #7f8c8d;">Hủy bỏ</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

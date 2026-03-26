@@ -1,0 +1,183 @@
+:root {
+    --primary: #4a90e2;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --bg: #f5f7fa;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+/* Filter Section */
+
+.filter-section {
+    margin-bottom: 30px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section input,
+.filter-section select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+
+/* Grid Layout */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+
+/* Card Styling */
+
+.ticket-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    height: 160px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+.upcoming {
+    background: var(--primary);
+}
+
+.sold {
+    background: var(--success);
+}
+
+.cancelled {
+    background: var(--danger);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.event-name {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 15px 0;
+}
+
+.price-section {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.final-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.promo-badge {
+    background: #fff3cd;
+    color: #856404;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.card-footer {
+    display: flex;
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-top: 1px solid #eee;
+    justify-content: space-between;
+}
+
+.btn-edit {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: var(--danger);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Buttons */
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-search {
+    background: #34495e;
+    color: white;
+}
+
+.btn-reset {
+    background: #95a5a6;
+    color: white;
+}
